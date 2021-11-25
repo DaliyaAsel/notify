@@ -7,6 +7,14 @@
         </td>
       </tr>
     </transition-group>
+    <button
+      @click="loadMore"
+      class="btn btnPrimary"
+      :disabled="maxLengthMessages === 0"
+      :class="{ btnDisabled: maxLengthMessages === 0 }"
+    >
+      Load more
+    </button>
   </table>
 </template>
 
@@ -15,6 +23,19 @@ export default {
   props: {
     messages: {
       type: Array,
+    },
+  },
+  computed: {
+    maxLengthMessages() {
+      return this.$store.getters.getMessageFilter.length; //проверяем длину отфильтрованного геттера массива
+    },
+  },
+  methods: {
+    loadMore() {
+      this.$store.dispatch("loadMessages")
+      .catch(() => {
+        this.$store.dispatch("setError", "Error : Network error");
+      });
     },
   },
 };
@@ -50,7 +71,7 @@ button {
   margin-top: 20px;
   &.btnDisabled {
     cursor: default;
-    opacity: 0.6;
+    opacity: 0.2;
   }
 }
 </style>
