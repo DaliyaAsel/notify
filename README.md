@@ -8,7 +8,7 @@ Work with store, loadMore, btn update, API
 :green_circle: SCSS          
 :green_circle: JS (ECMA6)              
 :green_circle: Vue   
-:green_circle: Vuex
+:green_circle: Vuex   
 :green_circle: php server   
 
 ### App gif:   
