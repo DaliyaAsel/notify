@@ -12,6 +12,8 @@ Work with store, loadMore, btn update, API
 :green_circle: php server   
 
 ### App gif:   
+![6iltFyLdon](https://user-images.githubusercontent.com/86303341/143471252-34792257-52c2-4ac9-b0c7-7b5cb4d22171.gif)
+
    
 
 ## Project setup
